@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
 	<head>
-		<title></title>
+		<title>Adventurer</title>
 
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
 		<link href="dist/styles/style.min.css" rel="stylesheet">
+
 		
 		<!--[if lt IE 9]>
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 	</head>
 	<body>
+		<header class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<a class="logo header__logo" href="javascript:void(0);" title="Логотип">adventurer</a>
+					</div>
+					<div class="col-md-offset-5 col-md-5">
+						<nav class="menu header__menu" id="menu">
+							<a class="menu__item menu__item--active" href="javascript:void(0);">home</a>
+							<a class="menu__item" href="javascript:void(0);">about</a>
+							<a class="menu__item" href="javascript:void(0);">service</a>
+							<a class="menu__item" href="javascript:void(0);">contact</a>
+							<a class="menu__item" href="javascript:void(0);">faq</a>
+							<a class="menu__item" href="javascript:void(0);">support</a>
+						</nav>
+						<form class="search header__search">
+							<input class="search__input" id="search__input" type="search">
+							<input class="search__button" id="search__button" type="button">
+						</form>
+					</div>
+				</div>
+			</div>
+		</header>
 		
 		<script type="text/javascript" src=" https://yastatic.net/jquery/2.2.3/jquery.min.js"></script>
+
+		<script src="src/scripts/header.js"></script>
 	</body>
 </html>

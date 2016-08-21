@@ -1,0 +1,28 @@
+.search	
+	position absolute
+	top 30px
+	right 0
+	&__input
+		margin-right 30px
+		padding-left 15px
+		padding-right @padding-left
+		height 25px
+		width 0
+		border 1px solid #000
+		border-radius 10px
+		outline none
+		visibility hidden
+		transition all .35s ease
+		&:focus
+			border-color #ec4848
+	
+	&__button
+		float right
+		margin-left auto
+		padding 0
+		width 30px
+		height @width
+		background-color transparent
+		background-image url('../../images/header/header__search.jpg')
+		border none
+		outline none
