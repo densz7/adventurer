@@ -6,10 +6,14 @@
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		
+
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans:600,800" rel="stylesheet">
 		<link href="dist/styles/style.min.css" rel="stylesheet">
+		<link href="owl.carousel.css" rel="stylesheet">
+		<link href="owl.theme.css" rel="stylesheet">
 
 		
 		<!--[if lt IE 9]>
@@ -40,9 +44,43 @@
 				</div>
 			</div>
 		</header>
+
+		<section class="banner">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="owl-example" class="slider banner__slider owl-carousel">
+							<div>
+								<h1 class="slider__title text-center">ADVENTURER</h1>
+
+								<p class="slider__text text-center">MURI, A TEMPLATE AT THE HEART OF THE BEAUTY</p>
+							</div>
+
+							<div>
+								<p class="slider__text slider__text--size text-center">web development / creative agency / professional photography</p>
+
+								<h2 class="slider__title slider__title--size text-center">bigbest one page ever built</h2>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		
-		<script type="text/javascript" src=" https://yastatic.net/jquery/2.2.3/jquery.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 
 		<script src="src/scripts/header.js"></script>
+		<script src="src/scripts/owl.carousel.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#owl-example").owlCarousel({
+					navigation: true,
+					slideSpeed : 700,
+					singleItem:true,
+					pagination: false,
+					autoPlay: true
+				});
+			});
+		</script>
 	</body>
 </html>
