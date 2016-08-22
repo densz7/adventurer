@@ -1,0 +1,119 @@
+.accordeon
+	margin-bottom 13px
+	position relative
+	width 100%
+	text-align left
+	
+	&__check
+		display none
+		
+		&:checked ~ .accordeon__content
+			height 140px
+		
+		&:checked ~ .accordeon__label
+			background-color $main-color
+		
+		&:checked ~ .accordeon__label .accordeon__plus
+			opacity 0
+		
+		&:checked ~ .accordeon__label .accordeon__minus
+			opacity 1
+	
+	&__label
+		position relative
+		padding-left 15px
+		display block
+		height 57px
+		line-height 57px
+		font-family: 'Open Sans', sans-serif;
+		font-size 16px
+		color #fff
+		font-weight 600
+		background-color: $color
+		border-radius 2px
+		cursor pointer
+		transition all .35s ease 
+		
+		&:hover
+			background-color: ($color + 15%)
+		
+		&::after
+			content ''
+			display block
+			position absolute
+			top 0
+			right 60px
+			height 100%
+			width 1px
+			background-color: #bebebe
+	
+	&__content
+		margin-top -1px
+		height 0
+		background-color: #f8f8f8
+		border 1px solid #c4c4c4
+		border-radius 2px
+		overflow hidden
+		-webkit-transition all 0.5s ease-in-out
+		-moz-transition all 0.5s ease-in-out
+		-o-transition all 0.5s ease-in-out
+		-ms-transition all 0.5s ease-in-out
+		transition all 0.5s ease-in-out
+		
+	&__text
+		margin-top 35px
+		margin-left 25px
+		font-size 14px
+		color $color
+	
+	&__plus
+		position absolute
+		right 18px
+		top 50%
+		width 25px
+		height @width
+		line-height @width
+		text-align center
+		font-size 22px
+		background-color: #afafaf
+		border-radius 50%
+		box-shadow 0 0 0 3px #696e72
+		transform translateY(-50%)
+		transition all .35s ease
+		
+		&::after
+			content ''
+			position absolute
+			top 50%
+			right -18px
+			display block
+			width 20px
+			height 8px
+			transform translateY(-50%)
+			background-color: #afafaf
+		
+	&__minus
+		position absolute
+		right 18px
+		top 50%
+		width 25px
+		height @width
+		line-height 21px
+		text-align center
+		font-size 25px
+		border-radius 50%
+		box-shadow 0 0 0 3px #fff
+		transform translateY(-50%)
+		opacity 0
+		transition all .35s ease
+		
+		&::after
+			content ''
+			position absolute
+			top 50%
+			right -18px
+			display block
+			width 18px
+			height 8px
+			transform translateY(-50%)
+			background-color: #fff
