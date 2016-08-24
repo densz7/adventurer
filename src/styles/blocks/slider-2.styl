@@ -1,0 +1,45 @@
+.slider-2
+	margin-top 48px
+	color $color
+	font-family: 'Roboto Condensed', sans-serif;
+	
+	&__photo
+		margin-left 35px
+		margin-right 36px
+		width 120px
+		float left
+		height @width
+		background-repeat no-repeat
+		background-position: center center
+	
+	&__name
+		margin-bottom 0
+		font-size 25px
+		text-transform uppercase
+		font-weight 600
+	
+	&__prof
+		display block
+		margin-top 5px
+		font-size 14px
+		font-weight 600
+		text-transform uppercase
+		color $main-color
+	
+	&__review
+		margin-top 30px
+		font-size 18px
+		font-weight 300
+	
+	&.owl-theme .owl-controls .owl-page span
+		margin 0
+		margin-right 7px
+		background-color: $color
+		opacity 1
+		transition all .35s ease
+	
+		&:hover
+			background-color: ($main-color +15%)
+		
+	&.owl-theme .owl-controls .owl-page.active span
+		background-color: $main-color
