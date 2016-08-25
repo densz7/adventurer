@@ -1,0 +1,89 @@
+.portfolio
+	margin-top 60px
+	text-align center
+		
+	&__tab
+		margin-right 35px
+		font-size 16px
+		color $color
+		font-weight 600
+		text-transform uppercase
+		cursor pointer
+		transition all .35s ease
+		
+		&--active
+			color $main-color
+	
+	&__img
+		position relative
+		margin-top 50px
+		height 200px
+		background-repeat no-repeat
+		background-size cover
+		
+		&:hover .portfolio__filter
+			opacity 1			
+	
+	&__mix
+		display none
+	
+	&__filter
+		position absolute
+		top 0
+		right 0
+		bottom 0
+		left 0
+		color #fff
+		background-color rgba($main-color, .78)
+		opacity 0
+		transition all .35s ease
+		
+	&__icons
+		position absolute
+		top 50%
+		left 50%
+		font-size 0
+		transform translate(-50%, -50%)
+		
+		&::before
+			content ''
+			display block
+			position absolute
+			top 15px
+			left 36px
+			width 6px
+			height @width
+			background-color #fff
+			border-radius 50%
+		
+		&::after
+			content ''
+			display block
+			position absolute
+			top 50%
+			left 32px
+			width 15px
+			height 3px
+			background-color: #fff
+	
+	&__zoom
+	&__link
+		margin-right 14px
+		display inline-block
+		width 32px
+		height @width
+		background-repeat no-repeat
+		background-position center center
+		border 3px solid #fff
+		border-radius 50%
+	
+	&__img-name
+		margin-top 25px
+		margin-bottom 0
+		font-size 20px
+		font-weight 300
+	
+	&__img-desk
+		margin-top 5px
+		font-size 12px
+		font-weight 300

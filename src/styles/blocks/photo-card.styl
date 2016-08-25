@@ -1,0 +1,59 @@
+.photo-card
+	position relative
+	color #fff
+	height 300px
+	background-repeat no-repeat
+	background-size cover
+	overflow hidden
+	
+	&__effect
+		height 100px
+		position absolute
+		bottom 0
+		left 0
+		right 0
+		text-align center
+		background-color $main-color
+		transform translateY(100px)
+		transition all .35s ease
+	
+	&:hover .photo-card__effect
+		transform translateY(0)
+	
+	&__name
+		margin-bottom 0
+		font-size 25px
+		font-weight 400
+	
+	&__prof
+		display block
+		font-size 18px
+		font-weight 400
+	
+	&__icon
+		position relative
+		margin-right 7px
+		font-size 20px
+		color #fff
+		text-decoration none
+		transition all .35s ease
+		
+		&::after
+			content ''
+			display block
+			position absolute
+			width 100%
+			height 2px
+			left 0
+			bottom -3px
+			background-color: #fff
+			opacity 0
+			transition all .35s ease
+	
+		&:hover
+			color #000
+			text-decoration none
+		
+			&::after
+				opacity 1
+				background-color #000
