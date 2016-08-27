@@ -1,28 +1,41 @@
 .search	
 	position absolute
-	top 27px
-	right 0
+	top 22px
+	right 80px
+	visibility hidden
+	transform translateY(-450px)
+	transition all .35s ease
+	
 	&__input
-		margin-right 30px
 		padding-left 15px
 		padding-right @padding-left
-		height 25px
-		width 0
-		border 1px solid #000
+		height 30px
+		line-height 30px
+		width 360px
+		font-size 20px
+		border none
 		border-radius 10px
 		outline none
-		visibility hidden
-		transition all .35s ease
-		&:focus
-			border-color $main-color
 	
 	&__button
-		float right
-		margin-left auto
-		padding 0
-		width 30px
-		height @width
+		position absolute
+		right 10px
+		top 8px
+		line-height 100%
+		font-size 20px
+		color $color
+		text-align center
+		transition all .35s ease
+		
+		&:hover
+			color $main-color
+	
+	&__submit
+		position absolute
+		top 0
+		left 0
+		height 100%
+		width 100%
 		background-color transparent
-		background-image url('../../images/header/header__search.jpg')
 		border none
 		outline none

@@ -12,7 +12,7 @@
 
 .owl-theme .owl-controls .owl-buttons div{
 	position: absolute;
-	top: 50%;
+	top: 0;
 	color: #FFF;
 	display: inline-block;
 	zoom: 1;

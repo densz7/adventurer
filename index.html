@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 	<head>
 		<title>Adventurer</title>
@@ -22,6 +22,10 @@
 		<![endif]-->
 	</head>
 	<body>
+		<div class="preloader">
+			<div class="preloader__loader"></div>
+		</div>
+
 		<header class="header">
 			<div class="container">
 				<div class="row">
@@ -37,9 +41,25 @@
 							<a class="menu__item" href="javascript:void(0);">faq</a>
 							<a class="menu__item" href="javascript:void(0);">support</a>
 						</nav>
-						<form class="search header__search">
-							<input class="search__input" id="search__input" type="search">
-							<input class="search__button" id="search__button" type="button">
+
+						<a class="header__button" href="javascript:void(0);">	
+							<div class="header__show">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>
+
+							<div class="header__close">
+								<i class="fa fa-times" aria-hidden="true"></i>
+							</div>	
+						</a>
+
+						<form class="search header__search" action="javascript:void(0);">
+							<input class="search__input" type="search" placeholder="enter the query" required autofocus
+>
+
+							<div class="search__button">
+								<input class="search__submit" id="search__submit" type="submit" value="">
+								<i class="fa fa-search" aria-hidden="true"></i>
+							</div>	
 						</form>
 					</div>
 				</div>
@@ -55,16 +75,18 @@
 								<h1 class="slider-1__title text-center">ADVENTURER</h1>
 
 								<p class="slider-1__text text-center">MURI, A TEMPLATE AT THE HEART OF THE BEAUTY</p>
+
+								<a href="javascript:void(0)" class="button banner__button">see more</a>
 							</div>
 
 							<div>
 								<p class="slider-1__text slider-1__text--size text-center">web development / creative agency / professional photography</p>
 
 								<h2 class="slider-1__title slider-1__title--size text-center">bigbest one page ever built</h2>
+
+								<a href="javascript:void(0)" class="button banner__button">see more</a>
 							</div>
 						</div>
-
-						<a href="javascript:void(0)" class="button banner__button">see more</a>
 					</div>
 				</div>
 			</div>
@@ -705,6 +727,15 @@ cursus malesuada facilisis.Lorem ipsum dolor sit amet, consectetur facilisis.</p
 					}
 
 				});
+			});
+		</script>
+
+		<script>
+			$(window).on('load', function () {
+				var $preloader = $('.preloader'),
+				$svg_anm = $preloader.find('.preloader');
+				$svg_anm.fadeOut();
+				$preloader.delay(500).fadeOut('slow');
 			});
 		</script>
 	</body>
