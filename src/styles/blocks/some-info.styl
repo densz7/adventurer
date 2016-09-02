@@ -1,5 +1,4 @@
 .some-info
-	margin-left -13px
 	padding-top 50px
 	min-height 350px
 	background-color: #151515
@@ -11,6 +10,9 @@
 		margin-top 25px
 		font-size 14px
 		color #ccc
+	
+	&__social-icons
+		margin-top 40px
 	
 	&__features
 	&__tags
@@ -61,5 +63,54 @@
 		display inline-block
 		width 60px
 		height @width
+	
+	@media (max-width: $screen-xs-max)	
+		text-align center
 		
+		&__logo
+			margin-left 0
+		
+		&__features
+		&__tags
+		&__posts
+			margin-left 0
+		
+		&__item
+			margin-right auto
+			margin-left auto
+			display table
+		
+		&__posts-list
+			margin-right auto
+			margin-left auto
+			width 100%
+	
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)	
+		text-align center
+		
+		&__logo
+			margin-left 0
+		
+		&__features
+		&__tags
+		&__posts
+			margin-left 0
+		
+		&__item
+			margin-right auto
+			margin-left auto
+			display table
+		
+		&__posts-list
+			margin-right auto
+			margin-left auto
+	
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+		padding-bottom 30px
+		
+		&__social-icons
+			margin-left -25px
+
+		&__posts-list
+			width 100%
 		

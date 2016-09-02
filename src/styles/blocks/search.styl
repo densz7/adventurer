@@ -8,13 +8,12 @@
 	
 	&__input
 		padding-left 15px
-		padding-right @padding-left
+		padding-right 30px
 		height 30px
 		line-height 30px
 		width 360px
 		font-size 20px
 		border none
-		border-radius 10px
 		outline none
 	
 	&__button
@@ -39,3 +38,16 @@
 		background-color transparent
 		border none
 		outline none
+	
+	@media (max-width: $screen-xs-max)
+		margin-bottom 15px
+		position static
+		transform translateY(0)
+		visibility visible
+		
+		&__input
+			padding-left 5px
+			padding-right 25px
+			width 87%
+			font-size 18px
+			

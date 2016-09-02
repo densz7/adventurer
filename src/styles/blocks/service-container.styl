@@ -2,7 +2,7 @@
 	margin-top 55px
 	padding-top 170px
 	padding-bottom 40px
-	width 330px
+	max-width 330px
 	text-align center
 	font-family: 'Roboto Condensed', sans-serif;
 	border 1px solid #dbdbdb
@@ -12,6 +12,7 @@
 	&__title
 		margin-left 25px
 		font-size 22px
+		text-align left
 		text-transform uppercase
 		font-weight 700
 	
@@ -19,6 +20,7 @@
 		margin-left 25px
 		margin-top 25px
 		font-size 18px
+		text-align left
 		font-weight 300
 	
 	&__button
@@ -54,3 +56,9 @@
 		
 		&:hover
 			background-image url('../../images/service/icon-right-hover.png')
+	
+	@media (max-width: $screen-xs-max)
+		&__title
+		&__desc
+			margin-left 0
+			text-align center

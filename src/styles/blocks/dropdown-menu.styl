@@ -1,0 +1,72 @@
+.dropdown-menu
+	margin-top 15px
+	margin-bottom 7px
+	height 0
+	overflow hidden
+	transition all .35s ease
+
+	&__item
+		padding 8px 5px
+		display block
+		font-size 14px
+		color $color
+		text-transform uppercase
+		font-weight 600
+		transition all .35s ease
+		
+		&:hover
+			background-color $main-color
+			color #fff
+
+		&--active
+			background-color $main-color
+			color #fff
+
+	&__icon
+		margin-top 37px
+		display block
+		float right
+		cursor pointer
+
+	&__lines
+		position relative
+		width 25px
+		height 4px
+		background-color $color
+		border-radius 4px
+		transition all .35s ease
+		
+		&:hover
+			background-color $main-color
+			
+			&::before
+			&::after
+				background-color $main-color
+
+		&::before
+			content ''
+			position absolute
+			top -8px
+			display block
+			width 25px
+			height 4px
+			background-color $color
+			border-radius 4px
+			transition all .35s ease
+		
+		&::after
+			content ''
+			position absolute
+			bottom -8px
+			display block
+			width 25px
+			height 4px
+			background-color $color
+			border-radius 4px
+			transition all .35s ease	
+		
+	&__check
+		display none
+		
+		&:checked + .dropdown-menu
+			height 263px

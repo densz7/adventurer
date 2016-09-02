@@ -15,7 +15,6 @@ headerButton.onclick = function() {
 		search.style.transform = 'translateY(0)';
 		menu.style.visibility = 'hidden';
 		menu.style.opacity = '0';
-		check = false;
 	}
 	else {
 		headerShow.style.opacity = '1';
@@ -26,6 +25,7 @@ headerButton.onclick = function() {
 		searchInput.value = '';
 		menu.style.visibility = 'visible';
 		menu.style.opacity = '1';
-		check = true;
 	}
+
+	check = !check;
 };

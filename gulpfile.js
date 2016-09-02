@@ -33,20 +33,15 @@ gulp.task('compile_stylus', function () {
         .pipe(gulp.dest('dist/styles/')); // Копируем файл style.css в папку dist/styles/    
 });
 
-// // Создаем задачу для минификации css
-// gulp.task('css-min', ['compile_stylus'], function() {
-//     gulp.src('dist/styles/style.css') // Выбираем файл для минификации
-	
-// 	.pipe(sourcemaps.init())
-	
-//         .pipe(cssnano()) // Сжимаем
-	
-//         .pipe(rename({suffix: '.min'})) // Добавляем суффикс .min
-	
-// 	.pipe(sourcemaps.write('./'))
-	
-//         .pipe(gulp.dest('dist/styles/')); // Выгружаем в папку dist/styles/
-// });
+gulp.task('js_concat', function () {
+
+	return gulp.src(['src/scripts/*.js']) // Подаем на вход файлы с расширением .js
+
+	.pipe(concat('script.js')) // Склеиваем все js файлы в script.js
+
+	.pipe(gulp.dest('dist/scripts/')); // Копируем файл script.js в папку dist/scripts/ 
+
+});
 
 // Создаем задачу watch, которая следит за измненеиями файлов с расширением .styl
 gulp.task('watch', function () {
@@ -54,4 +49,4 @@ gulp.task('watch', function () {
 });
 
 // Создаем задачу default для автоматического просмотра изменений и их компиляции
-gulp.task('default', ['compile_stylus', 'watch']);
+gulp.task('default', ['compile_stylus', 'js_concat', 'watch']);

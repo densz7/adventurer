@@ -10,3 +10,30 @@
 	
 	&__copy-red
 		color $main-color
+	
+	&__social-icons
+			margin-top 3px
+			margin-right -27px
+			text-align right
+
+	@media (max-width: $screen-xs-max)
+		&__copyright
+			text-align center
+			
+		&__social-icons
+			margin-top 20px
+			margin-right 0
+			text-align center
+	
+	@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max)
+		&__copyright
+			text-align center
+
+		&__social-icons
+			margin-right 0
+			text-align center
+	
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+		&__social-icons
+			margin-right 0
+			text-align center
